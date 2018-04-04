@@ -18,7 +18,7 @@ fun main(args: Array<String>) {
 @Component
 class DataLoader (val customerRepository: CustomerRepository): ApplicationRunner {
     override fun run(args: ApplicationArguments?) {
-            val customer = Customer(id = 0,firstName = "Marcel", lastName = "Widmer")
+            val customer = Customer(firstName = "Marcel", lastName = "Widmer")
             customerRepository.save(customer)
     }
 }
