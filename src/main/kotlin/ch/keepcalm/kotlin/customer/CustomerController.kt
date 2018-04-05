@@ -1,6 +1,8 @@
 package ch.keepcalm.kotlin.customer
 
+import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
+import javax.validation.Valid
 
 @RestController
 @RequestMapping(value = ["/customers"])
@@ -12,15 +14,19 @@ class CustomerController(val customerService: CustomerService){
     @GetMapping(value = ["/{id}"])
     fun getCustomerById(@PathVariable id: Long): Customer = customerService.getCustomerById(id)
 
-    @PutMapping(value = ["{/id}"])
-    fun updateCustomer(@PathVariable id: Long, @RequestBody customer: Customer){
-        assert(customer.id == id)
-        customerService.save(customer)
+    @PutMapping(value = ["/{id}"])
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    fun updateCustomer(@PathVariable id: Long,  @RequestBody @Valid customer: Customer) {
+        if (customer.id == id) customerService.save(customer)
+        else throw BadRequestException()
     }
 
     @DeleteMapping(value = ["/{id}"])
     fun removeCustomer(@PathVariable id: Long) = customerService.remove(id)
 
     @PostMapping
-    fun addCustomer(customer: Customer) : Customer = customerService.add(customer)
+    fun addCustomer(@RequestBody @Valid customer: Customer) : Customer = customerService.add(customer)
 }
+
+@ResponseStatus(value = HttpStatus.BAD_REQUEST)
+class BadRequestException: RuntimeException()

@@ -20,6 +20,5 @@ class DataLoader (val customerRepository: CustomerRepository): ApplicationRunner
     override fun run(args: ApplicationArguments?) {
             customerRepository.save(Customer(firstName = "Marcel", lastName = "Widmer"))
             customerRepository.save(Customer(firstName = "Basco", lastName = "Rex"))
-            customerRepository.save(Customer(firstName = "Bat", lastName = "Man"))
     }
 }

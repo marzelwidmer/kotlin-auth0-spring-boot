@@ -1,20 +1,37 @@
 ### POST CUSTOMER
 POST http://localhost:8080/customers
 Accept: */*
+Content-Type: application/json;charset=UTF-8
 Cache-Control: no-cache
 
 {"firstName":"John","lastName":"Doe"}
 
+### PUT CUSTOMER
+PUT http://localhost:8080/customers/3
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+{"id": 3, "firstNames":"Jane","lastNames":"Doe"}
+
+### DELETE CUSTOMER
+DELETE http://localhost:8080/customers/3
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+
+
 ### GET ALL CUSTOMERS
 GET http://localhost:8080/customers
 Accept: */*
+Content-Type: application/json;charset=UTF-8
 Cache-Control: no-cache
 
 
 ### GET ONE CUSTOMER
-
 GET http://localhost:8080/customers/1
 Accept: */*
+Content-Type: application/json;charset=UTF-8
 Cache-Control: no-cache
 
 ###

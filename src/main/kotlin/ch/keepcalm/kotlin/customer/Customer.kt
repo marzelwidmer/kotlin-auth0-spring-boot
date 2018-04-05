@@ -4,6 +4,7 @@ import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
+import javax.validation.constraints.NotBlank
 
 /*
 The Entity class is so small and concise, right?
@@ -15,12 +16,14 @@ This is needed because Hibernate requires an entity to have a no-arg constructor
 */
 @Entity
 data class Customer(/*@Id val id: String = UUID.randomUUID().toString(),*/
-                    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE) val id: Long = 0,
-                    val firstName: String = "",
-                    val lastName: String = ""){
+        @Id @GeneratedValue(strategy = GenerationType.SEQUENCE) val id: Long = 0,
+        @get: NotBlank(message = "{firstName.required}")
+        var firstName: String = "",
+        @get: NotBlank(message = "{lastName.required}")
+        val lastName: String = "") {
 
     // only needed because of DatabaseLoader
     // constructor(firstName: String, lastName: String) : this(UUID.randomUUID().toString(),firstName, lastName)
-    constructor(firstName: String, lastName: String) : this(0L, firstName, lastName)
+    //constructor(firstName: String, lastName: String) : this(0L, firstName, lastName)
 
 }
