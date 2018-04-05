@@ -12,7 +12,7 @@ Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json;charset=UTF-8
 
-{"id": 3, "firstNames":"Jane","lastNames":"Doe"}
+{"id": 3, "firstName":"Jane","lastName":"Doe"}
 
 ### DELETE CUSTOMER
 DELETE http://localhost:8080/customers/3
