@@ -6,6 +6,7 @@ Cache-Control: no-cache
 
 {"firstName":"John","lastName":"Doe"}
 
+
 ### PUT CUSTOMER
 PUT http://localhost:8080/customers/3
 Accept: */*
@@ -35,3 +36,11 @@ Content-Type: application/json;charset=UTF-8
 Cache-Control: no-cache
 
 ###
+GET http://localhost:8080/customers/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IlEwWXhPVU0wUmtNME5EWkZNVGd5T0RBNU5VTkNNelV3UVVJeFFUVkJOVVF4TTBKRFFUUkdOdyJ9.eyJpc3MiOiJodHRwczovL2tvdGxpbi1zcHJpbmctYm9vdC5hdXRoMC5jb20vIiwic3ViIjoieFBISjZuYTBZd0pqSHZwemN3QU1vamJ5YWdJRjNPbkJAY2xpZW50cyIsImF1ZCI6ImtvdGxpbi1qd3QiLCJpYXQiOjE1MjI5NjE2MjAsImV4cCI6MTUyMzA0ODAyMCwiYXpwIjoieFBISjZuYTBZd0pqSHZwemN3QU1vamJ5YWdJRjNPbkIiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.htQaDKsKx8kmL82iH0WeKhJWIw6hQppaS5MKQRQV-QlIGkRB1dwy4Szta6sTMeloO9wFqfaEZg4mbRoH50_FV1Q8DK7kbgoe6MxMX1kki6t6wIatj7Jo8Zhs-GNLso5c81LOhKCLw6WxbbXdlydDxi8qgtaQHtTPONjLWps38BymF0sDLtOwrPbrdnMEzSany6wUA5bgUZlX_7zG3t7u9__V8M1owXK8ff87eqErY9ePHOvh8W1iLmxzuA3eScr2hnQYn2i6Fxj3RCl9LkryirnkEkTSfmfVHYlbVvcd4KJRzT9GfNDJt7_BvsB-C-RXLiBDUVDCGZ47EWCDJ9hwYA
+
+###
+
