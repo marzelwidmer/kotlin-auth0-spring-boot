@@ -1,0 +1,20 @@
+### POST CUSTOMER
+POST http://localhost:8080/customers
+Accept: */*
+Cache-Control: no-cache
+
+{"firstName":"John","lastName":"Doe"}
+
+### GET ALL CUSTOMERS
+GET http://localhost:8080/customers
+Accept: */*
+Cache-Control: no-cache
+
+
+### GET ONE CUSTOMER
+
+GET http://localhost:8080/customers/1
+Accept: */*
+Cache-Control: no-cache
+
+###
