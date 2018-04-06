@@ -44,3 +44,19 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IlEwWXhPVU0wUm
 
 ###
 
+
+
+POST https://kotlin-spring-boot.auth0.com/oauth/token
+Content-Type: application/json
+
+{
+"client_id":"xPHJ6na0YwJjHvpzcwAMojbyagIF3OnB",
+"client_secret":"lPzHUf1GF4lsZSkg2APSTZAKt-MjOiC6QssFwIdmiv_oU9PXE0aqalj90jHK2PzD",
+"audience":"kotlin-jwt",
+"grant_type":"client_credentials"
+}
+
+###
+
+
+
