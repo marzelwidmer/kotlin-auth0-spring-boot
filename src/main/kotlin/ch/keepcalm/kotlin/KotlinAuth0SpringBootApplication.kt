@@ -6,9 +6,12 @@ import org.springframework.boot.ApplicationArguments
 import org.springframework.boot.ApplicationRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
+import org.springframework.context.annotation.PropertySource
+import org.springframework.context.annotation.PropertySources
 import org.springframework.stereotype.Component
 
 @SpringBootApplication
+@PropertySources(PropertySource("classpath:application.properties"), PropertySource("classpath:auth0.properties"))
 class KotlinAuth0SpringBootApplication
 
 fun main(args: Array<String>) {
